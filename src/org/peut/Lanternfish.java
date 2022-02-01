@@ -5,18 +5,21 @@ import java.util.ArrayList;
 
 public class Lanternfish
 {
-    static ArrayList<Lanternfish> school = new ArrayList<Lanternfish>();
+    static ArrayList<Lanternfish> school = new ArrayList<>();
     private int daysUntilSpawn;
 
-
-    public Lanternfish() {
-        setDaysUntilSpawn(8);
-        school.add(this);
-    }
 
     public Lanternfish(int leftDays) {
         setDaysUntilSpawn(leftDays);
         school.add(this);
+    }
+
+    public Lanternfish(  int [] initDays ) {
+
+        for ( int i : initDays){
+            new Lanternfish( i );
+        }
+
     }
 
     private int ageOneDay(){
