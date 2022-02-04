@@ -10,7 +10,7 @@ public class Lanternfish
 
     public Lanternfish(  int [] initDays ) {
         for ( int i : initDays){
-            school[ initDays[i] ]++;
+            school[ i ]++;
             schoolSize++;
         }
     }
@@ -36,8 +36,8 @@ public class Lanternfish
         System.out.printf(" total : %16d - ", schoolSize );
 
 
-        for (int i = 0; i < school.length; ++i) {
-            System.out.printf( " %16d ", school[i]);
+        for ( long dayCount :  school) {
+            System.out.printf( " %16d ", dayCount );
         }
 
         System.out.println();
